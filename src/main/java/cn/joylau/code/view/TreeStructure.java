@@ -13,7 +13,7 @@ import java.util.Collection;
  * cn.joylau.code.view
  * 2587038142@qq.com
  */
-public class treeStructure implements TreeStructureProvider {
+public class TreeStructure implements TreeStructureProvider {
     @NotNull
     @Override
     public Collection<AbstractTreeNode> modify(@NotNull AbstractTreeNode parent, @NotNull Collection<AbstractTreeNode> children, ViewSettings settings) {

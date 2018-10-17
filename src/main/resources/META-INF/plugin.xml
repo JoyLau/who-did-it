@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>cn.joylau.code.who-did-it</id>
-    <name>Who Did It</name>
+    <name>who did it</name>
     <vendor email="2587038142@qq.com" url="https://github.com/JoyLau/who-did-it">To contact me</vendor>
 
     <description><![CDATA[
@@ -8,20 +8,17 @@
     <em>most HTML tags may be used</em>
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
-
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-        <projectViewNodeDecorator implementation="cn.joylau.code.view.VCSInfoTreeNodeDecorator"/>
-        <!--<vcsChangesViewRefresher implementation="cn.joylau.code.changes.ChangesViewImpl"/>-->
+        <projectViewNodeDecorator implementation="cn.joylau.code.view.VCSDecoratorNode"/>
         <!--<treeStructureProvider implementation="cn.joylau.code.view.treeStructure"/>-->
     </extensions>
 
+    <project-components>
+        <component>
+            <implementation-class>cn.joylau.code.compont.VCSDecoratorProject</implementation-class>
+        </component>
+    </project-components>
+
     <actions>
-        <!-- Add your actions here -->
     </actions>
 </idea-plugin>
