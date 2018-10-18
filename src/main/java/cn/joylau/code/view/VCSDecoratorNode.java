@@ -42,13 +42,13 @@ public class VCSDecoratorNode implements ProjectViewNodeDecorator {
 
         if (vFile == null) return;
 
-        data.addText(data.getPresentableText(), SimpleTextAttributes.REGULAR_ATTRIBUTES);
-
         if (VCSDecoratorCache.getInstance().getMap().containsKey(vFile.getPath())) {
+            data.addText(data.getPresentableText(), SimpleTextAttributes.REGULAR_ATTRIBUTES);
             data.addText(VCSDecoratorCache.getInstance().getMap().get(vFile.getPath()));
         } else {
             PresentableNodeDescriptor.ColoredFragment coloredFragment = VCSUtils.getNodeDesc(project, vFile);
             if (coloredFragment != null) {
+                data.addText(data.getPresentableText(), SimpleTextAttributes.REGULAR_ATTRIBUTES);
                 data.addText(coloredFragment);
                 VCSDecoratorCache.getInstance().getMap().put(vFile.getPath(), coloredFragment);
             }
