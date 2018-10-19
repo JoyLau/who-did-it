@@ -57,7 +57,6 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
         this.changeListListener = new ChangeListListener() {
             @Override
             public void changeListChanged(ChangeList fromList) {
-                System.out.println(fromList);
             }
         };
     }
