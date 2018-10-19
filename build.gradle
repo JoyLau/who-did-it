@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'cn.joylau.code'
-version '2018.2.4'
+version '2018.2'
 
 sourceCompatibility = 1.8
 
