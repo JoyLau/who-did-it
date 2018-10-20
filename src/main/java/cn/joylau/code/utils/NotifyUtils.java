@@ -26,7 +26,7 @@ public class NotifyUtils {
         );
     }
 
-    public static void showUpdated(@NotNull Project project ,String version) {
+    public static void showUpdated(@NotNull Project project, String version) {
         show(
                 project,
                 BundleUtils.message("notification.updated.title", version),

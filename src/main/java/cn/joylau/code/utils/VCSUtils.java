@@ -1,6 +1,9 @@
 package cn.joylau.code.utils;
 
+import com.intellij.ide.plugins.IdeaPluginDescriptor;
+import com.intellij.ide.plugins.PluginManager;
 import com.intellij.ide.util.treeView.PresentableNodeDescriptor;
+import com.intellij.openapi.extensions.PluginId;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vcs.AbstractVcs;
 import com.intellij.openapi.vcs.ProjectLevelVcsManager;
@@ -45,7 +48,26 @@ public class VCSUtils {
         return null;
     }
 
-    private static String getDate(Date date) {
-        return DateUtils.isSameDay(new Date(), date) ? "Today" : new SimpleDateFormat("yyyy/MM/dd").format(date);
+    private static String getDate(Date d) {
+        Date newDate = new Date();
+        if (DateUtils.isSameDay(d, newDate)) {
+            long delta = (newDate.getTime() - d.getTime()) / 1000;
+            if (delta / 60 < 1) return "Moments ago";
+            if (delta / 60 <= 60) return delta / 60 + " minutes ago";
+            return "Today " + new SimpleDateFormat("HH:mm:ss").format(d);
+        }
+        return new SimpleDateFormat("yyyy/MM/dd").format(d);
+    }
+
+    public static String getVersion() {
+        return getPlugin().getVersion();
+    }
+
+    private static IdeaPluginDescriptor getPlugin() {
+        return PluginManager.getPlugin(PluginId.getId(getPluginId()));
+    }
+
+    public static String getPluginId() {
+        return BundleUtils.PLUGIN_ID;
     }
 }
