@@ -10,15 +10,30 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <projectViewNodeDecorator implementation="cn.joylau.code.view.VCSDecoratorNode"/>
-        <!--<treeStructureProvider implementation="cn.joylau.code.view.treeStructure"/>-->
+
+        <applicationService serviceImplementation="cn.joylau.code.settings.WhoDidSettings"/>
+
+        <applicationConfigurable instance="cn.joylau.code.panel.SettingsPanel"/>
     </extensions>
 
     <project-components>
         <component>
             <implementation-class>cn.joylau.code.compont.VCSDecoratorProject</implementation-class>
         </component>
+        <component>
+            <implementation-class>cn.joylau.code.update.UpdateComponent</implementation-class>
+        </component>
     </project-components>
 
     <actions>
+        <group id="cn.joylau.code.action.group" text="Who Did It" description="Who Did It Actions" popup="true">
+            <action
+                    id="cn.joylau.code.action.enable"
+                    class="cn.joylau.code.action.EnableAction"
+                    text="Enabled"
+                    description="Enable Who Did It Action"
+            />
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
     </actions>
 </idea-plugin>
