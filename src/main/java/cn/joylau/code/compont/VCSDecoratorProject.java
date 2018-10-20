@@ -44,10 +44,12 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
             public void propertyChanged(@NotNull VirtualFilePropertyEvent event) {
                 refresh(event.getFile());
             }
+
             @Override
             public void contentsChanged(@NotNull VirtualFileEvent event) {
                 refresh(event.getFile());
             }
+
             @Override
             public void fileDeleted(@NotNull VirtualFileEvent event) {
                 delete(event.getFile());
@@ -61,17 +63,17 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
         };
     }
 
-    private void refresh(VirtualFile virtualFile){
+    private void refresh(VirtualFile virtualFile) {
         if (VCSDecoratorCache.getInstance().getMap().containsKey(virtualFile.getPath())) {
-            PresentableNodeDescriptor.ColoredFragment coloredFragment = VCSUtils.getNodeDesc(project,virtualFile);
+            PresentableNodeDescriptor.ColoredFragment coloredFragment = VCSUtils.getNodeDesc(project, virtualFile);
             if (coloredFragment != null) {
-                VCSDecoratorCache.getInstance().getMap().put(virtualFile.getPath(),coloredFragment);
+                VCSDecoratorCache.getInstance().getMap().put(virtualFile.getPath(), coloredFragment);
                 ProjectView.getInstance(this.project).refresh();
             }
         }
     }
 
-    private void delete(VirtualFile virtualFile){
+    private void delete(VirtualFile virtualFile) {
         VCSDecoratorCache.getInstance().getMap().remove(virtualFile.getPath());
     }
 
@@ -88,6 +90,9 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
         }
         if (this.vfListener != null) {
             VirtualFileManagerEx.getInstance().removeVirtualFileListener(this.vfListener);
+        }
+        if (this.changeListListener != null) {
+            ChangeListManager.getInstance(project).removeChangeListListener(this.changeListListener);
         }
     }
 
