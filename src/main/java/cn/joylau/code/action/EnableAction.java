@@ -17,7 +17,8 @@ public class EnableAction extends ToggleAction {
 
     @Override
     public boolean isSelected(AnActionEvent e) {
-        return e.getProject() != null && WhoDidSettings.getInstance().isInfoEnable();
+        //ShowSettingsUtil.getInstance().showSettingsDialog(null,);
+        return e.getProject() != null && WhoDidSettings.getInstance().isEnableNodeDecorator();
     }
 
     @Override
