@@ -43,11 +43,12 @@ public class WhoDidSettings implements PersistentStateComponent<WhoDidState> {
         whoDidState.setPluginVersion(version);
     }
 
-    public boolean isInfoEnable() {
-        return whoDidState.isInfoEnable();
+    public boolean isEnableNodeDecorator() {
+        return whoDidState.isEnableNodeDecorator();
     }
 
-    public void setInfoEnable(boolean infoEnable) {
-        whoDidState.setInfoEnable(infoEnable);
+    public void setEnableNodeDecorator(boolean enableNodeDecorator) {
+        whoDidState.setEnableNodeDecorator(enableNodeDecorator);
     }
+
 }
