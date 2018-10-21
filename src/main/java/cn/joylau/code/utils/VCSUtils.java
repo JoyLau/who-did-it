@@ -70,4 +70,9 @@ public class VCSUtils {
     public static String getPluginId() {
         return BundleUtils.PLUGIN_ID;
     }
+
+    public static Date getPluginReleaseDate(){
+        return getPlugin().getReleaseDate();
+    }
+
 }
