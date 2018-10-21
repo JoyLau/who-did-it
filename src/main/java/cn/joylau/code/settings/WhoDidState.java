@@ -8,7 +8,7 @@ package cn.joylau.code.settings;
 class WhoDidState {
     public String pluginVersion = "";
 
-    public boolean infoEnable = true;
+    public boolean enableNodeDecorator = true;
 
     String getPluginVersion() {
         return pluginVersion;
@@ -18,11 +18,11 @@ class WhoDidState {
         this.pluginVersion = pluginVersion;
     }
 
-    public boolean isInfoEnable() {
-        return infoEnable;
+    public boolean isEnableNodeDecorator() {
+        return enableNodeDecorator;
     }
 
-    public void setInfoEnable(boolean infoEnable) {
-        this.infoEnable = infoEnable;
+    public void setEnableNodeDecorator(boolean enableNodeDecorator) {
+        this.enableNodeDecorator = enableNodeDecorator;
     }
 }
