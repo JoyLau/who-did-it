@@ -3,8 +3,7 @@ plugins {
     id 'org.jetbrains.intellij' version '0.3.11'
 }
 
-group 'cn.joylau.code'
-version '2018.2'
+group 'cn.joylau.code.who-did-it'
 
 sourceCompatibility = 1.8
 
