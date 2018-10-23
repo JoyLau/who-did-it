@@ -2,6 +2,8 @@
     <id>cn.joylau.code.who-did-it</id>
     <name>who did it</name>
     <vendor email="2587038142@qq.com" url="https://github.com/JoyLau/who-did-it">To contact me</vendor>
+    <version>2018.2.20181021</version>
+    <releaseDate>20181021</releaseDate>
 
     <description><![CDATA[
     Enter short description for your plugin here.<br>
@@ -26,7 +28,7 @@
     </project-components>
 
     <actions>
-        <group id="cn.joylau.code.action.group" text="Who Did It" description="Who Did It Actions" popup="true">
+        <group id="cn.joylau.code.action.group.settings" text="Who Did It" description="Who Did It Actions" popup="true">
             <action
                     id="cn.joylau.code.action.enable"
                     class="cn.joylau.code.action.EnableAction"
@@ -35,5 +37,9 @@
             />
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </group>
+
+        <action id="cn.joylau.code.action.disable" class="cn.joylau.code.action.EnableAction">
+            <add-to-group group-id="ProjectViewPopupMenu"/>
+        </action>
     </actions>
 </idea-plugin>
