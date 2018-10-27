@@ -3,10 +3,8 @@ package cn.joylau.code.panel;
 import cn.joylau.code.panel.form.SettingsForm;
 import cn.joylau.code.settings.WhoDidSettings;
 import cn.joylau.code.utils.VCSUtils;
-import com.intellij.ide.projectView.ProjectView;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
-import com.intellij.openapi.project.ProjectCoreUtil;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -56,8 +54,15 @@ public class SettingsPanel implements SearchableConfigurable {
     }
 
     @Override
+    public void reset() {
+        if (isModified()) {
+            JCheckBox checkBox = settingsForm.enableVCSInfo;
+            checkBox.setSelected(!checkBox.isSelected());
+        }
+    }
+
+    @Override
     public void apply() throws ConfigurationException {
         whoDidSettings.setEnableNodeDecorator(settingsForm.enableVCSInfo.isSelected());
-        ProjectView.getInstance(ProjectCoreUtil.theProject).refresh();
     }
 }

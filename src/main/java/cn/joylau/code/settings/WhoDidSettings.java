@@ -1,9 +1,11 @@
 package cn.joylau.code.settings;
 
+import com.intellij.ide.projectView.ProjectView;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
+import com.intellij.openapi.project.ProjectCoreUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,6 +51,7 @@ public class WhoDidSettings implements PersistentStateComponent<WhoDidState> {
 
     public void setEnableNodeDecorator(boolean enableNodeDecorator) {
         whoDidState.setEnableNodeDecorator(enableNodeDecorator);
+        ProjectView.getInstance(ProjectCoreUtil.theProject).refresh();
     }
 
 }
