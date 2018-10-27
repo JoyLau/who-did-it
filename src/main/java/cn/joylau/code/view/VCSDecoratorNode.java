@@ -1,6 +1,7 @@
 package cn.joylau.code.view;
 
 import cn.joylau.code.cache.VCSDecoratorCache;
+import cn.joylau.code.settings.WhoDidSettings;
 import cn.joylau.code.utils.VCSUtils;
 import com.intellij.ide.projectView.PresentationData;
 import com.intellij.ide.projectView.ProjectViewNode;
@@ -21,14 +22,19 @@ import com.intellij.ui.SimpleTextAttributes;
  * 2587038142@qq.com
  */
 public class VCSDecoratorNode implements ProjectViewNodeDecorator {
+
     private final Project project;
+
+    private WhoDidSettings whoDidSettings;
 
     public VCSDecoratorNode(Project project) {
         this.project = project;
+        this.whoDidSettings = WhoDidSettings.getInstance();
     }
 
     @Override
     public void decorate(ProjectViewNode node, PresentationData data) {
+        if (!whoDidSettings.isEnableNodeDecorator()) return;
         VirtualFile vFile;
         if (node instanceof PsiDirectoryNode) return;
 

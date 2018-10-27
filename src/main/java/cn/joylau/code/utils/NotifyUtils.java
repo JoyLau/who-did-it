@@ -11,10 +11,10 @@ import org.jetbrains.annotations.Nullable;
  * 2587038142@qq.com
  */
 public class NotifyUtils {
-    public static void showUpdate(@NotNull Project project) {
+    public static void showUpdate(@NotNull Project project, String newVersion) {
         show(
                 project,
-                BundleUtils.message("notification.update.title", "2018.2.4"),
+                BundleUtils.message("notification.update.title", newVersion),
                 BundleUtils.message("notification.update.content"),
                 new NotificationGroup(
                         BundleUtils.PLUGIN_ID,
@@ -52,7 +52,7 @@ public class NotifyUtils {
      * @param type     notification type
      * @param listener optional listener
      */
-    public static void show(@NotNull Project project, @NotNull String title, @NotNull String content,
+    private static void show(@NotNull Project project, @NotNull String title, @NotNull String content,
                             @NotNull NotificationGroup group, @NotNull NotificationType type,
                             @Nullable NotificationListener listener) {
         Notification notification = group.createNotification(title, content, type, listener);

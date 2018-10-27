@@ -17,7 +17,7 @@ public class BundleUtils {
     public static final String PLUGIN_ID = "cn.joylau.code.who-did-it";
 
     @NonNls
-    private static final String BUNDLE_NAME = "messages.Who-Did-It-Bundle";
+    private static final String BUNDLE_NAME = "messages.who-wid-it-bundle";
 
     @NotNull
     private static final ResourceBundle BUNDLE = ResourceBundle.getBundle(BUNDLE_NAME);
@@ -25,7 +25,7 @@ public class BundleUtils {
     private BundleUtils() {
     }
 
-    static String message(@PropertyKey(resourceBundle = BUNDLE_NAME) String key, Object... params) {
+    public static String message(@PropertyKey(resourceBundle = BUNDLE_NAME) String key, Object... params) {
         return CommonBundle.message(BUNDLE, key, params);
     }
 }

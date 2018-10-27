@@ -31,14 +31,14 @@
         <group id="cn.joylau.code.action.group.settings" text="Who Did It" description="Who Did It Actions" popup="true">
             <action
                     id="cn.joylau.code.action.enable"
-                    class="cn.joylau.code.action.EnableAction"
-                    text="Enabled"
-                    description="Enable Who Did It Action"
+                    class="cn.joylau.code.action.EnableVCSInfoAction"
+                    text="enabled VCS info"
+                    description="enabled VCS info Action"
             />
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </group>
 
-        <action id="cn.joylau.code.action.disable" class="cn.joylau.code.action.EnableAction">
+        <action id="cn.joylau.code.action.disable" class="cn.joylau.code.action.EnableVCSInfoAction">
             <add-to-group group-id="ProjectViewPopupMenu"/>
         </action>
     </actions>

@@ -10,8 +10,8 @@ import org.jetbrains.annotations.NotNull;
  * cn.joylau.code.action
  * 2587038142@qq.com
  */
-public class EnableAction extends ToggleAction {
-    public EnableAction() {
+public class EnableVCSInfoAction extends ToggleAction {
+    public EnableVCSInfoAction() {
         super();
     }
 
