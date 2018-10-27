@@ -11,6 +11,12 @@ import org.jetbrains.annotations.Nullable;
  * 2587038142@qq.com
  */
 public class NotifyUtils {
+
+    /**
+     * showUpdate Tips
+     * @param project project
+     * @param newVersion version
+     */
     public static void showUpdate(@NotNull Project project, String newVersion) {
         show(
                 project,
@@ -26,6 +32,11 @@ public class NotifyUtils {
         );
     }
 
+    /**
+     * show updated info
+     * @param project project
+     * @param version version
+     */
     public static void showUpdated(@NotNull Project project, String version) {
         show(
                 project,
