@@ -30,7 +30,7 @@
         Fixes:<br/>
         <ul>
         <li>- Fix Bug: submit your code on the VCS can't update the status</li>
-        <li>- Fix Bug: node decorator frequent refresh<</li>
+        <li>- Fix Bug: node decorator frequent refresh</li>
         </ul>
     ]]></change-notes>
 
