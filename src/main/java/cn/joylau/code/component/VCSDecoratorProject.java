@@ -1,4 +1,4 @@
-package cn.joylau.code.compont;
+package cn.joylau.code.component;
 
 import cn.joylau.code.cache.VCSDecoratorCache;
 import cn.joylau.code.utils.VCSUtils;

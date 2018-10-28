@@ -1,14 +1,38 @@
 <idea-plugin>
     <id>cn.joylau.code.who-did-it</id>
     <name>who did it</name>
-    <vendor email="2587038142@qq.com" url="https://github.com/JoyLau/who-did-it">To contact me</vendor>
+    <vendor email="2587038142@qq.com" url="https://github.com/JoyLau/who-did-it"/>
+    <category>VCS</category>
     <version>2018.2.20181021</version>
     <releaseDate>20181021</releaseDate>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    <h1>who did it</h1>
+      <br/>
+      <a href="https://github.com/JoyLau/who-did-it">GitHub</a> |
+      <a href="https://www.paypal.me/joyfay">Donate with PayPal</a>
+      <br/>
+      <br/>
+
+      <p><b>who did it</b> is a plugin that displays version control system information on software based on the IntelliJ platform (JetBrains IDEs), showing the last commit and submission time of the file,which will be displayed in the file tree of the project panel.</p>
+      <br/>
+
+      <p><b>who did it</b>  是一个可以在基于 IntelliJ 平台上的软件(JetBrains 家族系列)显示版本控制系统信息的插件,显示文件最后一次提交人和提交时间,这些信息将被显示在 project 面板的文件树上</p>
+      <br/>
+
+      Just like this:
+      <br/>
+
+      <p><img src="http://image.joylau.cn/blog/pluginwho-did-it.png" border="0" width="400" alt="who did it plugin"/></p>
     ]]></description>
+
+    <change-notes><![CDATA[
+        Fixes:<br/>
+        <ul>
+        <li>- Fix Bug: submit your code on the VCS can't update the status</li>
+        <li>- Fix Bug: node decorator frequent refresh<</li>
+        </ul>
+    ]]></change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
         <projectViewNodeDecorator implementation="cn.joylau.code.view.VCSDecoratorNode"/>
@@ -20,7 +44,7 @@
 
     <project-components>
         <component>
-            <implementation-class>cn.joylau.code.compont.VCSDecoratorProject</implementation-class>
+            <implementation-class>cn.joylau.code.component.VCSDecoratorProject</implementation-class>
         </component>
         <component>
             <implementation-class>cn.joylau.code.update.UpdateComponent</implementation-class>

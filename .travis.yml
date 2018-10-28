@@ -17,4 +17,3 @@ env:
 
 before_install:
 - chmod +x gradlew
-- pip install --user codecov
