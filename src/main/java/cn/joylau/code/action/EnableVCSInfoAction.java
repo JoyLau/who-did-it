@@ -20,7 +20,6 @@ public class EnableVCSInfoAction extends ToggleAction {
 
     @Override
     public boolean isSelected(AnActionEvent e) {
-        //ShowSettingsUtil.getInstance().showSettingsDialog(null,);
         return e.getProject() != null && whoDidSettings.isEnableNodeDecorator();
     }
 

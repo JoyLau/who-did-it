@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 2587038142@qq.com
  */
 public class VCSDecoratorCache {
+
     private static VCSDecoratorCache ourInstance = new VCSDecoratorCache();
 
     private ConcurrentHashMap<String, PresentableNodeDescriptor.ColoredFragment> map = new ConcurrentHashMap<>();

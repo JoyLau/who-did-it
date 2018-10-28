@@ -1,5 +1,6 @@
 package cn.joylau.code.utils;
 
+import cn.joylau.code.listener.SettingsOpeningListener;
 import com.intellij.notification.*;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +29,7 @@ public class NotifyUtils {
                         true
                 ),
                 NotificationType.INFORMATION,
-                NotificationListener.URL_OPENING_LISTENER
+                new SettingsOpeningListener(project, "Plugins")
         );
     }
 

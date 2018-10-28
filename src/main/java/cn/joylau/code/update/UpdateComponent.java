@@ -56,7 +56,7 @@ public class UpdateComponent extends AbstractProjectComponent {
                 .build()
         );
 
-        this.scheduledTask.scheduleAtFixedRate(this::showUpdate, 20L,60L, TimeUnit.SECONDS);
+        this.scheduledTask.schedule(this::showUpdate, 60L, TimeUnit.SECONDS);
         this.scheduledTask.schedule(this::showUpdated, 25L, TimeUnit.SECONDS);
         this.scheduledTask.scheduleAtFixedRate(this::refreshNodeDecorator, 30L, 60L, TimeUnit.SECONDS);
     }
