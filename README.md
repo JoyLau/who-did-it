@@ -34,7 +34,7 @@ Just like this:
 There are 2 ways to install the who did it plugin
 
 1. Open Preferences | Plugins, click Browse Repositories, enter the keyword to find `who did it`, install it.
-2. Direct [Click here] (https://github.com/JoyLau/who-did-it/releases) to download the latest version, then open Preferences | Plugins, click Install plugin for disk, select the downloaded jar package to install
+2. Direct [Click here](https://github.com/JoyLau/who-did-it/releases) to download the latest version, then open Preferences | Plugins, click Install plugin for disk, select the downloaded jar package to install
 
 ### Enable/Disable
 There are three ways to enable/disable this feature:
