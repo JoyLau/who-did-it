@@ -1,6 +1,6 @@
 # Who Did It
 
-[![](https://jaywcjlove.github.io/sb/lang/english.svg)](README.md)
+[![](https://jaywcjlove.github.io/sb/lang/english.svg)](https://github.com/JoyLau/who-did-it/blob/master/README.md)
 [![Build Status](https://travis-ci.org/JoyLau/who-did-it.svg?branch=master)](https://travis-ci.org/JoyLau/who-did-it)
 [![Downloaded](https://img.shields.io/github/downloads/JoyLau/who-did-it/total.svg)]()
 [![Version](https://img.shields.io/github/release/JoyLau/who-did-it.svg?style=flat&label=version)](https://github.com/JoyLau/who-did-it/releases)
@@ -11,7 +11,7 @@
 
 **说明**
 
-[English](README.md) | [中文](README-CN.md) 
+[English](https://github.com/JoyLau/who-did-it/blob/master/README.md) | [中文](https://github.com/JoyLau/who-did-it/blob/master/README-CN.md) 
 
 `who did it`  是一个可以在基于 IntelliJ 平台上的软件(JetBrains 家族系列)显示版本控制系统信息的插件,显示文件最后一次提交人和提交时间,这些信息将被显示在 project 面板的文件树上.
 

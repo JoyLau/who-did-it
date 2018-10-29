@@ -2,8 +2,9 @@
     <id>cn.joylau.code.who-did-it</id>
     <name>who did it</name>
     <vendor email="2587038142@qq.com" url="https://github.com/JoyLau/who-did-it"/>
-    <category>VCS</category>
+    <category>VCS integration</category>
     <version>2018.2_20181028</version>
+    <idea-version since-build="182.4892.20"/>
     <releaseDate>20181028</releaseDate>
 
     <description><![CDATA[

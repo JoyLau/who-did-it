@@ -1,6 +1,6 @@
 # Who Did It
 
-[![](https://jaywcjlove.github.io/sb/lang/chinese.svg)](README-CN.md)
+[![](https://jaywcjlove.github.io/sb/lang/chinese.svg)](https://github.com/JoyLau/who-did-it/blob/master/README-CN.md)
 [![Build Status](https://travis-ci.org/JoyLau/who-did-it.svg?branch=master)](https://travis-ci.org/JoyLau/who-did-it)
 [![Downloaded](https://img.shields.io/github/downloads/JoyLau/who-did-it/total.svg)]()
 [![Version](https://img.shields.io/github/release/JoyLau/who-did-it.svg?style=flat&label=version)](https://github.com/JoyLau/who-did-it/releases)
@@ -11,7 +11,7 @@
 
 **Explanation**
 
-[English](README.md) | [中文](README-CN.md) 
+[English](https://github.com/JoyLau/who-did-it/blob/master/README.md) | [中文](https://github.com/JoyLau/who-did-it/blob/master/README-CN.md) 
 
 `who did it` is a plugin that displays version control system information on software based on the IntelliJ platform (JetBrains IDEs), showing the last commit and submission time of the file,which will be displayed in the file tree of the project panel.
 
