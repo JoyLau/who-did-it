@@ -42,3 +42,6 @@ There are three ways to enable/disable this feature:
 1. Click Tools on the menu bar, select the Who Did It tab, select / deselect enable VCS Info
 2. Open the Settings panel Preferences | Other Settings | Who Did It, check enable VCS Info on the panel
 3. Select a folder or file on the project panel, right click and select Hide VCS Info / Show VCS Info
+
+### Donate me
+If you find my plugin helpful, donate me using [PayPal](https://www.paypal.me/joyfay) ,  [AliPay](http://image.joylau.cn/blog/blog-AliPay.png) or [WeChat Pay](http://image.joylau.cn/blog/blog-WeChatPay.png)
