@@ -12,8 +12,8 @@ import com.intellij.openapi.vcs.changes.ChangeListManager;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.VirtualFileEvent;
 import com.intellij.openapi.vfs.VirtualFileListener;
+import com.intellij.openapi.vfs.VirtualFileManager;
 import com.intellij.openapi.vfs.VirtualFilePropertyEvent;
-import com.intellij.openapi.vfs.ex.VirtualFileManagerEx;
 import com.intellij.util.messages.MessageBusConnection;
 import org.jetbrains.annotations.NotNull;
 
@@ -79,7 +79,7 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
 
     @Override
     public void initComponent() {
-        VirtualFileManagerEx.getInstance().addVirtualFileListener(this.vfListener);
+        VirtualFileManager.getInstance().addVirtualFileListener(this.vfListener);
         ChangeListManager.getInstance(project).addChangeListListener(this.changeListListener);
     }
 
@@ -89,7 +89,7 @@ public class VCSDecoratorProject extends AbstractProjectComponent {
             this.messageBus.disconnect();
         }
         if (this.vfListener != null) {
-            VirtualFileManagerEx.getInstance().removeVirtualFileListener(this.vfListener);
+            VirtualFileManager.getInstance().removeVirtualFileListener(this.vfListener);
         }
         if (this.changeListListener != null) {
             ChangeListManager.getInstance(project).removeChangeListListener(this.changeListListener);
